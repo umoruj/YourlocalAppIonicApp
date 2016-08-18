@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar navbar>
+    <ion-title>
+      Futurama Episodes
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+<ion-list>
+  <ion-item *ngFor="#person of people">
+    <ion-avatar item-left>
+      <img src="{{person.image}}">
+    </ion-avatar>
+    <h2>{{person.name}}</h2>
+    <p>{{person.airdate}}</p><br/><button id="{{person._id}}" [navPush]="detailsPage">More Info</button>
+  </ion-item>
+</ion-list>
+</ion-content>
